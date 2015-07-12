@@ -19,6 +19,15 @@ You need to clone this repo into your home directory and edit the server.py file
 
 You also need to edit your minecraft user profile to play `version 1.7.9` to make sure all our plugins work nicely. Updates are on the way.
 
+###Quickstart
+
+You will need to install Python and then you can follow the tutorials at [Raspberry Pi here](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/worksheet/) but just change the way you setup the server to
+
+    import mcpi.minecraft as minecraft
+    import server
+
+    mc = minecraft.Minecraft.create(server.address)
+
 
 ###Shrimps
 
