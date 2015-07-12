@@ -1,5 +1,5 @@
 
-import mcpi.minecraft as minecraft
+from mcpi import minecraft
 import server
 
 mc = minecraft.Minecraft.create(server.address)
