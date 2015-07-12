@@ -1,5 +1,6 @@
 # MoT (Minecraft Of Things)
 
+![CloudMaker](https://github.com/cheapjack/cheapjack.github.io/blob/master/tumblr_files/Cloudmaker.png)
 
 ###Background
 
