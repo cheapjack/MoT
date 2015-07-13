@@ -24,12 +24,22 @@ You also need to edit your minecraft user profile to play `version 1.7.9` to mak
 
 ###Quickstart
 
-You will need to install Python and then you can follow the tutorials at [Raspberry Pi here](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/worksheet/) You generally talk to the server with the API like this:
+You will need to install `Python v2.7` and then you can follow the tutorials at [Raspberry Pi here](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/worksheet/)
+
+I'd recommend looking at the [Hitchhiker's Guide To Python](http://docs.python-guide.org/en/latest/) for extensive tips on installing `Python 2.7` (much of what we use is not ready for `Python 3`) and although you can run from the command line I'd recommend using the Idle IDE. I'd also consider using Virtual Environments  [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
+
+####Hello World!
+
+You generally talk to the server with the API like this:
 
     from mcpi import minecraft
     import server
 
     mc = minecraft.Minecraft.create(server.address)
+
+If you open Idle and run the HelloWorld.py module you can see what happens on the CloudMaker server. Alternatively run from the command line in the mcpi directory in the enclosing directory you cloned `MoT` into (**ie** `~/MoT/mcpi`) using 
+
+    $ python HelloWorld.py
 
 Other unfinished more detailed setup guides and resources are on the [Minecraft of Things](http://minecraftofthings.tumblr.com/resources) but updating, simplifying and migrating to the Wiki in due course
 
