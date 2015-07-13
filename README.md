@@ -24,7 +24,7 @@ You also need to edit your minecraft user profile to play `version 1.7.9` to mak
 
 ###Quickstart
 
-You will need to install Python and then you can follow the tutorials at [Raspberry Pi here](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/worksheet/) You setup the server like this:
+You will need to install Python and then you can follow the tutorials at [Raspberry Pi here](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/worksheet/) You generally talk to the server with the API like this:
 
     from mcpi import minecraft
     import server
@@ -32,6 +32,16 @@ You will need to install Python and then you can follow the tutorials at [Raspbe
     mc = minecraft.Minecraft.create(server.address)
 
 Other unfinished more detailed setup guides and resources are on the [Minecraft of Things](http://minecraftofthings.tumblr.com/resources) but updating, simplifying and migrating to the Wiki in due course
+
+You can also play with all of the code in Martin O'Hanlon and David Whale's excellent book **Adventures in Minecraft** which you can get from [the Wiley publishers' website](http://eu.wiley.com/WileyCDA/Section/id-823690.html)
+
+To make it work with our setup remember to just add the server module
+
+    import server
+    
+And add `(server.address)` to the mc object to make sure you send your API calls to the CloudMaker server    
+
+Of course you also need to be playing minecraft `v1.7.9` to see what's happening!
 
 ###Shrimps
 
