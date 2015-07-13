@@ -21,17 +21,22 @@ You also need to edit your minecraft user profile to play `version 1.7.9` to mak
 
 ###Quickstart
 
-You will need to install Python and then you can follow the tutorials at [Raspberry Pi here](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/worksheet/) but just change the way you setup the server to
+You will need to install Python and then you can follow the tutorials at [Raspberry Pi here](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/worksheet/) You setup the server like this:
 
-    import mcpi.minecraft as minecraft
+    from mcpi import minecraft
     import server
 
     mc = minecraft.Minecraft.create(server.address)
 
+Other unfinished more detailed setup guides and resources are on the [Minecraft of Things](http://minecraftofthings.tumblr.com/resources) but updating, simplifying and migrating to the Wiki in due course
 
 ###Shrimps
 
-It also uses the *brilliant* **Shrimped Arduino kits** from [Shrimping.it](http://shrimping.it/blog/) at its core and also features prototype methods for visualising data on onboard LED flashers, in Processing and in Minecraft 
+We've used mcpi with the *brilliant* **Shrimped Arduino kits** from [Shrimping.it](http://shrimping.it/blog/) at its core and used prototype methods for visualising raw temperature and turbdiity data on onboard LED flashers, in Processing and in Minecraft. We used this method for the [ShrimpCraft](https://github.com/cheapjack/ShrimpCraft) workshops with Octopus Collective and Amanda Steggell.
+
+###Minecraft of Things Wiki
+
+To Do
 
 
 **Note** These files are in progress, particularly the .pdf instructions that need checking and revising please see [issues](https://github.com/cheapjack/ShrimpCraft/issues)
