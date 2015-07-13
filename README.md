@@ -15,7 +15,11 @@ You can view the [Minecraft CloudMaker Server with this link](http://mc.fact.co.
 
 ###Requirements
 
-You need to clone this repo into your home directory and edit the `server.py` file depending on whether you are connecting to CloudMaker on a pi or not.
+First you will need to install `Python v2.7` from [here](https://www.python.org/about/gettingstarted/) and then you can follow the tutorials at [Raspberry Pi here](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/worksheet/)
+
+I'd recommend looking at the [Hitchhiker's Guide To Python](http://docs.python-guide.org/en/latest/) for extensive tips on installing `Python 2.7` (much of what we use is not ready for `Python 3`) and although you can run from the command line I'd recommend using the Idle IDE. I'd also consider using Virtual Environments  [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
+
+You then need to clone this repo into your home directory and edit the `server.py` file depending on whether you are connecting to CloudMaker on a pi or not.
 
 Change the flag `is_pi = True` if you are using a Pi to interact with the server
 Change the flag `is_pi = False` if you are using PC/MAC/Linux to interact with the server
@@ -23,10 +27,6 @@ Change the flag `is_pi = False` if you are using PC/MAC/Linux to interact with t
 You also need to edit your minecraft user profile to play `version 1.7.9` to make sure all our plugins work nicely. Updates on the way.
 
 ###Quickstart
-
-You will need to install `Python v2.7` and then you can follow the tutorials at [Raspberry Pi here](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/worksheet/)
-
-I'd recommend looking at the [Hitchhiker's Guide To Python](http://docs.python-guide.org/en/latest/) for extensive tips on installing `Python 2.7` (much of what we use is not ready for `Python 3`) and although you can run from the command line I'd recommend using the Idle IDE. I'd also consider using Virtual Environments  [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
 
 ####Hello World!
 
