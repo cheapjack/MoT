@@ -11,7 +11,7 @@
 This uses Martin O'Hanlon's [mcpi API](https://github.com/martinohanlon/mcpi) the Minecraft: Pi Edition API Python Library and his and Zhuowei's [Canary Raspberry Juice](https://github.com/martinohanlon/CanaryRaspberryJuice) plugin for use with FACT's CloudMaker Minecraft Server
 
 
-You can view the [Minecraft CloudMaker Server with this link](http://mc.fact.co.uk:8123/)
+You can view the [Minecraft CloudMaker Server with this link](http://mc.fact.co.uk:8124/)
 
 ###Requirements
 
