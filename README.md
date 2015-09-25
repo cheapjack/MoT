@@ -70,4 +70,3 @@ We've used mcpi with the *brilliant* **Shrimped Arduino kits** from [Shrimping.i
 [Read the Wiki here](https://github.com/cheapjack/MoT/wiki)
 
 **Note** These files are in progress, particularly the .pdf instructions that need checking and revising please see [issues](https://github.com/cheapjack/ShrimpCraft/issues)
->>>>>>> 1109bb98a0e6ce8429103ebb3db9d4371c575270
