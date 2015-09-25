@@ -39,6 +39,7 @@ def check_for_button():
       # The switch is on, but the light isn't
       light_pin.write(1)
       mc_server.run_command("time set 900")
+      mc_server.run_command("playsound mob.cat.hitt cloudmaker01")
 #      mc_server.run_command("loadcode nep8g8z6 0 396 168")
 #      mc_server.run_command("say loading")
       sleep(0.5)
@@ -48,7 +49,8 @@ def check_for_button():
       # The switch is off, but the light is on
       light_pin.write(0)
       mc_server.run_command("time set 14000")
-#      mc_server.run_command("say removing")
+# change the sound to your player or another
+      mc_server.run_command("playsound mob.cat.miaow cloudmaker01")
 #      mc_server.run_command("removecode nep8g8z6 0 396 168")
       light_status = False
 
