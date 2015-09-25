@@ -1,6 +1,4 @@
-# ~/usr/bin/python2.7
-
-# from mciot import ServerConnection
+#from mciot import ServerConnection
 from mcpi import minecraft
 from pyfirmata import Arduino, util, INPUT
 from time import sleep
@@ -33,6 +31,8 @@ button_pin.enable_reporting()
 light_pin = shrimp.digital[13]
 
 
+
+
 #Changing your players position
 def jump(blocks):
 	mc.postToChat("Jump your player " + str(blocks) + "UP!")
@@ -51,9 +51,9 @@ def check_for_switch():
 		if not light_status:
 			# The switch is on, but the light isn't
 			light_pin.write(1)
-			mc.postToChat("Switch Pulled!")
+			mc.postToChat("Switch Pulled! Jumping!")
 #      mc_server.run_command("removecode nep8g8z6 0 396 168")
-			jump(50)
+			jump(20)
 			#mc_server.run_command("time set 900")
 			#mc_server.run_command("loadcode nep8g8z6 0 396 168")
 			sleep(0.5)
@@ -71,6 +71,11 @@ def check_for_switch():
 while True:
 	playerPos = mc.player.getPos()
 	playerPos = minecraft.Vec3(int(playerPos.x), int(playerPos.y), int(playerPos.z))
+	pos = mc.player.getTilePos()
+	blockBelow = mc.getBlock(pos.x,pos.y-1,pos.z)
+	if blockBelow != 0 and blockBelow != 9:
+		mc.setBlock(pos.x, pos.y-1, pos.z, 41)
+	sleep(0.1)
 	check_for_switch()
 	sleep(0.1)
 
