@@ -12,6 +12,16 @@ Minecraft as you all know as a massive modding culture and we are just part of t
 
 We are going to send commands directly to minecraft with a language called pythonand connect it to real physical switches. 
 
+Ordnance Survey have even released a [Map of the UK](http://www.ordnancesurvey.co.uk/innovate/developers/minecraft-map-britain.html) in Minecraft so we are going to explore that and the FACT server, CloudMaker first before we try out the **Minecraft of Things** 
+
+###First Off
+
+ * Explore the FACT world
+ * Explore the OS map of Great Britain
+ * Find St Kilda
+ * Explore St Kilda in FACT
+ * Try out our switches
+
 ###Basic Tools
 
 ####Command Line
