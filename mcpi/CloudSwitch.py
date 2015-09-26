@@ -54,6 +54,7 @@ def check_for_switch():
 			mc.postToChat("Switch Pulled! Jumping!")
 #      mc_server.run_command("removecode nep8g8z6 0 396 168")
 			jump(20)
+			#beacon()
 			#mc_server.run_command("time set 900")
 			#mc_server.run_command("loadcode nep8g8z6 0 396 168")
 			sleep(0.5)
@@ -66,16 +67,25 @@ def check_for_switch():
 			#mc_server.run_command("say removing")
 			light_status = False
 
+def beacon():
+	mc.postToChat("Made A beacon " + str(blocks) + "UP!")
+	sleep(1)
+	mc.setBlocks(playerPos.x+1, playerPos.y-1, playerPos.z+1, playerPos.x+5, playerPos.y+1, playerPos.z+5, 57)
+	sleep(5)
+
 
 # Now just check regularly to see if they're online or not
 while True:
 	playerPos = mc.player.getPos()
 	playerPos = minecraft.Vec3(int(playerPos.x), int(playerPos.y), int(playerPos.z))
+	#beacon()	
+	#makes everything under your feet gold
 	pos = mc.player.getTilePos()
 	blockBelow = mc.getBlock(pos.x,pos.y-1,pos.z)
 	if blockBelow != 0 and blockBelow != 9:
 		mc.setBlock(pos.x, pos.y-1, pos.z, 41)
 	sleep(0.1)
+	#check if the switch has been pulled or switched
 	check_for_switch()
 	sleep(0.1)
 
