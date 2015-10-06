@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 #from mciot import ServerConnection
 from mcpi import minecraft
 from pyfirmata import Arduino, util, INPUT

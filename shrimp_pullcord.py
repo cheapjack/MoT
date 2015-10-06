@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# import modules
+
 from mciot import ServerConnection
 from pyfirmata import Arduino, util, INPUT
 from time import sleep
