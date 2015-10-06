@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 
 from mcpi import minecraft
 import server
