@@ -75,8 +75,9 @@ We will be doing this in more detail soon but we can make things happen in minec
  
  * Open a terminal window
  * Type `cd ~/MoTDSS2/mcpi/`  
- * Type `vim ~/MoTDSS2/mcpi/` and use the cursor keys to move around; see the vim instructions below but if you look through the code you can change the `beacon()` function to build beacons in the game based on minecraft coordinates.
- * When you've hacked the `beacon` function you can make your switch build or unbuild beacons in the game.
+ * Type `vim CloudSwitch.py` and use the cursor keys to move around; see the vim instructions below but if you look through the code you can change the `beacon()` function to build beacons in the game based on minecraft coordinates.
+ * When you've hacked the `beacon` function you can make your switch build or unbuild beacons in the game. You save any changes by typing `:wq` and press return
+ * You run your python programme by typing in the terminal `python CloudSwitch.py` and press return
  * Another **Do Something Saturday** workshop will look at the `mcpi` **API** in more detail
 
 
