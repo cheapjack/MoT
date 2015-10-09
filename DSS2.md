@@ -1,5 +1,8 @@
 # Mapping data and minecraft
 
+![issstation](https://cloud.githubusercontent.com/assets/128456/10395286/ff14c8d0-6e93-11e5-8dd3-5d6fa0e66edd.png)
+
+
 **Lesions in the Landscape** by *Shona Illingworth* refers to the islands of **St Kilda** as a a landscape haunted by traces of cultural memory; the community of people who lived there although small inhabited the islands for over 2000 years. She also hints at its more contemporary identity as a strategic point in the infrastructure of mapping and tracking technology often for semi-military applications. In her video installation she seems to link this to the forcible relocation of inhabitants in the 1930s; hinting at contemporary technology's control and tracking of cultural *externalised* memory. 
 
 There are more benign uses of this kind of tech and in this workshop we are going to look at some of that and apply and model it in Minecraft. But it's worth remembering that the internet and mobile technology which lets us play games like Minecraft is built on elements of military infrastucture. 
@@ -66,9 +69,9 @@ We can use the `mcpi` API to send special commands to minecraft which dinnerbone
 
 If you visit the Radar station on the StKilda island marked "THEN" you will see some buttons you can interact with by using the sign with a sword. One will 
 
-**Using the mcpi API with cloudswitch
+**Using the mcpi API with CloudSwitch.py
 
-We will be doing this in more detail soon but we can make things happen in minecraft with the `mcpi` API
+We will be doing this in more detail soon but we can make things happen in minecraft with the `mcpi` **API**
  
  * Open a terminal window
  * Type `cd ~/MoTDSS2/mcpi/`  
