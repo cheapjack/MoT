@@ -41,7 +41,7 @@ We can query the data in more detail too, to find things of interest.
 1. You can search for anything by modifying the query.  For example, if you zoom out a bit to see more of the NW, and then replace ["amenity"="post_box"] with ["aeroway"]
 1. Running that will show you all the airfields
 
-# Making Maps
+## Making Maps
 
 The [http://wiki.openstreetmap.org/wiki/Software/Mobile] page on the OpenStreetMap wiki has a good list of software to use to view maps and also record things like GPX traces on your smartphone.  For Android and iPhone, [OsmAnd](http://osmand.net/) is really good.
 
@@ -55,11 +55,11 @@ However, we can still use the Open Street Map data as the underlying map, so we 
 
 You can import the data from http://www.mcqn.com/files/FACT-to-DoES-Liverpool.gpx (either by giving the URL, or if - like today - that doesn't seem to be working, you can copy and paste it in) to show a GPX trace (recorded by OsmAnd) of me walking from FACT down to DoES Liverpool.
 
-# Mapping in Minecraft
+## Mapping in Minecraft
 
 I then want us to go into Single Player Mode and revisit the Ordnance Survey Map in Minecraft that I've installed from the [Ordnance Survey Minecraft project](http://www.ordnancesurvey.co.uk/innovate/developers/minecraft-map-britain.html). See if you can recreate some of the Maps you've played with above in the game; Can you make your own mapping system? I like building beacons in the game (3x3 pyramid of diamond blocks with a beacon placed on top of the middle diamond block and making paths in glowstone. Then when you turn the time to night you can easily see the most important data in the game and ignore the rest.
 
-# Satellite Tracking in Minecraft
+## Satellite Tracking in Minecraft
 
 These days when people release data they need to make it meaningful. You can see in overpass-turbo that when you click on the **data** tab the list of `JSON` data is hard to make sense of; the webpage converts this `JSON` formatted text into a human-readable map that we can make sense of.
 
@@ -69,7 +69,7 @@ We can use the `mcpi` API to send special commands to minecraft which dinnerbone
 
 If you visit the Radar station on the StKilda island marked "THEN" you will see some buttons you can interact with by using the sign with a sword. One will 
 
-**Using the mcpi API with CloudSwitch.py
+## Using the mcpi API with CloudSwitch.py
 
 We will be doing this in more detail soon but we can make things happen in minecraft with the `mcpi` **API**
  
