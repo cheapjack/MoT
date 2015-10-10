@@ -12,12 +12,22 @@ Although GPS, weather and communication satellites track our every move they are
 
 Projects like Open Street Map allow people to interact with incredibly detailed surveys of the planet and are quite clearly part of the internet of things and what people call big data. But this data is not only something you can **read**, but can be something we can add to and **write**.
 
+# Workshop
+
+1. Make maps
+1. Explore minecraft maps
+1. Build and track space stations in Minecraft and real life
+1. Predict where you can see the [International Space Station](http://open-notify.org/Open-Notify-API/)
+1. Make a map to remind you
+1. Play with minecraft and satellite tracking APIS
+
 # Mapping
 
 ## Exploring Maps
 www.openstreetmap.com looks like Google maps, but is actually a map you can contribute to.  It can also hold all sorts of more detail than Google maps do.  Let's have a look.
 
-For example I will show you how easy it is to add information to the big data of Open Street Map
+For example I will show you how easy it is to add information to the **big data** of Open Street Map
+
 1. Open [OpenStreetMap](http://jekyllrb.com/docs/drafts/) and login. You can sign-up for free
 1. Zoom in on FACT
 1. Clicking the "?" icon on the right hand side will let you find out more detail on anything on the map.  
@@ -26,7 +36,7 @@ For example I will show you how easy it is to add information to the big data of
 1. Do the same query, but this time choose the "building" it finds.  You'll see that doesn't give you much detail, just a tag to show that it's a building (that's how the software knows to show it as building, rather than a road, or a field or a postbox or whatever.
 1. Find the Walker Art Gallery and see what tags it has.  Then go edit the FACT building to give it the same detail.
 
-We can query the data in more detail too, to find things of interest.
+We can **query** the data in more detail too, to find things of interest.
 
 1. Go to http://overpass-turbo.eu/
 1. Navigate to Liverpool
@@ -51,7 +61,8 @@ However, we can still use the Open Street Map data as the underlying map, so we 
 
 1. Go to http://umap.fluv.io/en/
 1. Click on "Create a map"
-1. 
+1. You can then edit the map using the tools on the right, similar to Open Street Map
+1. Once you've added places of interest etc you can save it and change the way it looks; I want us to make a map that means something to you or a map of St Kilda and then edit the background to **Watercolour** to make classic looking treasure maps.
 
 You can import the data from http://www.mcqn.com/files/FACT-to-DoES-Liverpool.gpx (either by giving the URL, or if - like today - that doesn't seem to be working, you can copy and paste it in) to show a GPX trace (recorded by OsmAnd) of me walking from FACT down to DoES Liverpool.
 
@@ -65,9 +76,25 @@ These days when people release data they need to make it meaningful. You can see
 
 `JSON` is a standard for organising lists of data that you can write programmes to `interpret' this into a web page or some kind of meaningful or useful way. People write things called an  **API** that stands for **"Application Programming Interface"** that make this easier and quicker.
 
-We can use the `mcpi` API to send special commands to minecraft which dinnerbone at Mojang made for the Minecraft Raspberry Pi community with Martin O'Hanlon author of **Adventures in Minecraft**. Similarly a coder in Portland Oregon in the US wrote an **API** to find out the location of the **International Space Station (ISS)** for any time, a predicter for seeing the ISS by the naked eye and a way of finding out the name and number of humans in space at any one time.
+We can use the `mcpi` API to send special commands to minecraft which dinnerbone at Mojang made for the Minecraft Raspberry Pi community with Martin O'Hanlon author of **Adventures in Minecraft**. 
 
-If you visit the Radar station on the StKilda island marked "THEN" you will see some buttons you can interact with by using the sign with a sword. One will 
+Similarly a coder in Portland Oregon in the US wrote an **API** to find out the location of the **International Space Station (ISS)** for any time, a predicter for seeing the ISS by the naked eye and a way of finding out the name and number of humans in space at any one time.
+
+If you visit the Radar station on the StKilda island marked "THEN" you will see some buttons you can interact with by using the sign with a sword. One will give you a read out of the current location of the ISS, and another will build a model of the ISS on the CloudMaker server and transport a player there. 
+
+Finally we can use our web browser to predict where we can see the ISS next with the naked eye. We will do this and then place a marker on a map explaining this in the OS map in Minecraft and on the maps we can make at http://umap.fluv.io.
+
+1. Make another http://umap.fluv.io map
+1. Find where you want to see the ISS from.
+1. Make a note of the LATITUDE & LONGITUDE in the map address; it's the numbers at the end eg. http://umap.fluv.io/en/map/st-kilda-at-fact_3313#12/ `57.7999` / `-8.5340`
+1. Go to the address api.open-notify.org/iss-pass.json?lat=LAT&lon=LON
+1. This will give a fail message
+1. replace LAT and LON with the numbers from your location in the map
+1. Press return
+1. It will give a list of timestamps
+1. Convert the numbers into **real** dates with http://www.epochconverter.com/
+1. There you go; place this on your minecraft and http://umap.fluv.io/ maps and happy space station spotting!
+
 
 ## Using the mcpi API with CloudSwitch.py
 
