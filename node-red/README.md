@@ -25,3 +25,4 @@ Assumes some working knowledge of `python`, the command line, `mcpi` and `node-r
 ```
 [{"id":"4fd1c3ef.37dd1c","type":"mqtt-broker","broker":"localhost","port":"1883","clientid":""},{"id":"5355392e.7b463","type":"mqtt out","name":"Mosquitto","topic":"","qos":"","retain":"","broker":"4fd1c3ef.37dd1c","x":391,"y":260,"z":"e7f395ce.584028","wires":[]},{"id":"359574e1.bf1fdc","type":"debug","name":"","active":true,"console":"false","complete":"true","x":385,"y":162,"z":"e7f395ce.584028","wires":[]}]
 ```
+

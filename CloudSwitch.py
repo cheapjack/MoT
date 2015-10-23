@@ -7,6 +7,18 @@ from time import sleep
 import server
 
 mc = minecraft.Minecraft.create(server.address)
+mcdrawing = minecraftstuff.MinecraftDrawing(mc)
+
+
+# Use the command /getpos to find out where you are then use those 
+# x, y, z coordinates to build things
+# translate mc coords for mcpi ones
+# add this to x
+mcx = 177
+# - this from y
+mcy = 64
+# - this from z
+mcz = 135
 
 # Set up a light_status variable
 light_status = False
@@ -43,6 +55,50 @@ def jump(blocks):
 	# - wait for you to fall!
 	sleep(5)
 
+def beacon(x, y, z):
+	#playerPos = mc.player.getPos()
+	mc.postToChat("Made A beacon near " + str(x) + " " + str(y) + " " + str(z))
+	sleep(1)
+	mc.setBlocks(x+1, y-1, z+1, x+3, y, z+3, 57)
+	mc.setBlock(x+2, y+1, z+2, 138)
+	sleep(1)
+
+
+def beacon_near_player():
+	playerPos = mc.player.getPos()
+	playerPos = minecraft.Vec3(int(playerPos.x), int(playerPos.y), int(playerPos.z))
+	mc.postToChat("Made A beacon near " + str(playerPos))
+	sleep(1)
+	mc.setBlocks(playerPos.x+1, playerPos.y-1, playerPos.z+1, playerPos.x+3, playerPos.y, playerPos.z+3, 57)
+	mc.setBlock(playerPos.x+2, playerPos.y+1, playerPos.z+2, 138)
+	sleep(1)
+
+def beacon_near_player_off():
+	playerPos = mc.player.getPos()
+	mc.postToChat("Made A beacon near " + str(playerPos))
+	sleep(1)
+	mc.setBlocks(playerPos.x+1, playerPos.y-1, playerPos.z+1, playerPos.x+3, playerPos.y, playerPos.z+3, 0)
+	mc.setBlock(playerPos.x+2, playerPos.y+1, playerPos.z+2, 0)
+	sleep(1)
+
+def makeCircle(x, y, z, blocktype):
+	mcdrawing.drawCircle(x, y, z, blocktype
+
+
+def makeBlock(blocktype):
+	playerPos = mc.player.getPos()
+	playerPos = minecraft.Vec3(int(playerPos.x), int(playerPos.y), int(playerPos.z))
+	mc.setBlocks(playerPos.x + 2, playerPos.y + 2, playerPos.z + 2, blocktype)
+
+def makeTreasure(x, y, z, blocktype):
+	mc.setBlock(x + mcx, y - mcy, z - mcz, blocktype)
+
+# takes a minecraft coord and translates it for mcpi
+def makeSphere(x, y, z, radius, blocktype):
+	#playerPos = mc.player.getPos()
+	#playerPos = minecraft.Vec3(int(playerPos.x), int(playerPos.y), int(playerPos.z))	
+	#mcdrawing.drawSphere(playerPos.x - (radius*2), playerPos.y - (radius*2), playerPos.z - (radius*2), radius, blocktype)
+	mcdrawing.drawSphere(x + mcx, y - mcy, z - mcz, radius, blocktype)
 
 # A function to check if the button has been pressed, or the switch pulled and if it has
 # to send a command to the Minecraft server
@@ -53,10 +109,11 @@ def check_for_switch():
 		if not light_status:
 			# The switch is on, but the light isn't
 			light_pin.write(1)
-			mc.postToChat("Switch Pulled! Jumping!")
-#      mc_server.run_command("removecode nep8g8z6 0 396 168")
-			jump(20)
-			#beacon()
+			mc.postToChat("Switch Pulled!")
+			#jump(20)
+			beacon_near_player()
+			# uncomment and change x,y,z to coordinate you want
+			#beacon(x,y,z)
 			#mc_server.run_command("time set 900")
 			#mc_server.run_command("loadcode nep8g8z6 0 396 168")
 			sleep(0.5)
@@ -64,29 +121,24 @@ def check_for_switch():
 	else:
 		if light_status:
 			# The switch is off, but the light is on
+			beacon_near_player_off()
 			light_pin.write(0)
 			#mc_server.run_command("time set 14000")
 			#mc_server.run_command("say removing")
 			light_status = False
 
-def beacon():
-	mc.postToChat("Made A beacon " + str(blocks) + "UP!")
-	sleep(1)
-	mc.setBlocks(playerPos.x+1, playerPos.y-1, playerPos.z+1, playerPos.x+5, playerPos.y+1, playerPos.z+5, 57)
-	sleep(5)
-
 
 # Now just check regularly to see if they're online or not
 while True:
-	playerPos = mc.player.getPos()
-	playerPos = minecraft.Vec3(int(playerPos.x), int(playerPos.y), int(playerPos.z))
 	#beacon()	
 	#makes everything under your feet gold
+	'''
 	pos = mc.player.getTilePos()
 	blockBelow = mc.getBlock(pos.x,pos.y-1,pos.z)
 	if blockBelow != 0 and blockBelow != 9:
 		mc.setBlock(pos.x, pos.y-1, pos.z, 41)
 	sleep(0.1)
+	'''
 	#check if the switch has been pulled or switched
 	check_for_switch()
 	sleep(0.1)
