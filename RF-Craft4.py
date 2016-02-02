@@ -1,6 +1,12 @@
 #!/usr/bin/python
 
 # Moteino Receiver for RF-Crafting and button-craft
+# Example Secret Treasure game
+# Sets up a 5 button castle secret door game in the FACT CloudMaker Server
+# Go to the castle from FACT Cinema 1
+# Button Nodes 1 - 4 Open doors in the castle towers on the Ground Floor
+# Button Node 5 Reset the game and close the doors
+
 
 from mcpi import minecraft
 from mcpi import  minecraftstuff
@@ -12,9 +18,26 @@ mc = minecraft.Minecraft.create(server.address)
 
 mcdrawing = minecraftstuff.MinecraftDrawing(mc)
 
-
 # use the default mac serial port, '/dev/tty.SLAB_USBtoUART' this will change platform to platform
-ser = serial.Serial('/dev/tty.SLAB_USBtoUART', 9600)
+# Mac list your serial ports in Terminal 
+# $ ls /dev
+# It should show something like this /dev/tty.SLAB_USBtoUART', 9600
+# So therefore define your serial object like this
+# ser = serial.Serial('/dev/tty.SLAB_USBtoUART', 9600)
+##################
+# Raspberry Pi Mode
+# $ ls /dev
+# It should show something like this /dev/tty.ACM0
+# So therefore define your serial object like this
+ser = serial.Serial('/dev/tty.ACM0', 9600)
+#################
+
+# The Button sends the serial message (node , action)
+# node is the value in #define NODEID in Line 10 of the Arduino code in ~/RF-Craft/arduino/button/button.io It comes with the default node of 1 on the arduino HAT
+# action: "1", "Button Pressed"
+#	"2", "Error"
+#	"3", "OK"
+
 #button1_received_on = "1,1\r\n"
 #button2_received_on = "1,2\r\n"
 #button3_received_on = "1,3\r\n"
@@ -24,12 +47,12 @@ button2_received_on = "2,1\r\n"
 button3_received_on = "3,1\r\n"
 button4_received_on = "4,1\r\n"
 button5_received_on = "5,1\r\n"
-# The Button sends the serial message (action , node)
+# The Button sends the serial message (node , action)
 # action: "1", "Button Pressed"
 #	"2", "Error"
 #	"3", "OK"
 
-# translate mc coords for mcpi ones
+# translate FACTMinecraft coords for mcpi ones
 # add this to x
 #mcx = 177
 mcx = 0
