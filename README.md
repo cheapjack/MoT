@@ -12,8 +12,7 @@
 
 This is a repository of code prototypes and workshop examples of using mcpi with sensors and buttons.  
 
-<img="![rfcraftrev3prebuild](https://cloud.githubusercontent.com/assets/128456/24247663/823bc272-0fc4-11e7-913a-0aad5788bdf3.png)
-" width="400">
+<img="https://cloud.githubusercontent.com/assets/128456/24247663/823bc272-0fc4-11e7-913a-0aad5788bdf3.png" width="400">
 
 [RF-Craft](https://github.com/cheapjack/RF-Craft) is an open-source raspberry Pi HAT to send simple serial messages wirelessly on the 868Mhz radio band from an onboard button, analog inputs and a digital pin for temperature sensing. 
 
