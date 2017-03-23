@@ -3,7 +3,6 @@
 
 ![CloudMaker](https://github.com/cheapjack/cheapjack.github.io/blob/master/tumblr_files/Cloudmaker.png)
 
-
 ### Background
 
 [The Minecraft Of Things](http://minecraftofthings.tumblr.com) sprang from research with [FACT](http://fact.co.uk/), [Dr Mark Wright](https://twitter.com/dr_mark_wright), [Adrian McEwen](http://www.mcqn.com/) and Paul Harter of [PrintCraft](http://www.printcraft.org/) funded by [IT as a Utility (ITaaU) Network](http://www.itutility.ac.uk) for the [CloudMaker](https://github.com/cheapjack/CloudMaker) project
@@ -12,7 +11,7 @@
 
 This is a repository of code prototypes and workshop examples of using mcpi with sensors and buttons.  
 
-<img="https://cloud.githubusercontent.com/assets/128456/24247663/823bc272-0fc4-11e7-913a-0aad5788bdf3.png" width="400">
+<img src="https://cloud.githubusercontent.com/assets/128456/24247663/823bc272-0fc4-11e7-913a-0aad5788bdf3.png" width="400">
 
 [RF-Craft](https://github.com/cheapjack/RF-Craft) is an open-source raspberry Pi HAT to send simple serial messages wirelessly on the 868Mhz radio band from an onboard button, analog inputs and a digital pin for temperature sensing. 
 
