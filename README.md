@@ -10,17 +10,18 @@
 
 ### Resources
 
-This is a repository of code and workshop examples of using mcpi with sensors and buttons.  
+This is a repository of code prototypes and workshop examples of using mcpi with sensors and buttons.  
 
-CloudMaker has built an open-source raspberry Pi HAT that is due for release soon. This HAT makes it easy to send messages from an onboard button and respond to the 6 analog pins and an additional digital pin for temperature sensign. 
+<img="![rfcraftrev3prebuild](https://cloud.githubusercontent.com/assets/128456/24247663/823bc272-0fc4-11e7-913a-0aad5788bdf3.png)
+" width="400">
 
-It's also designed to act as a standalone arduino board  
+[RF-Craft](https://github.com/cheapjack/RF-Craft) is an open-source raspberry Pi HAT to send simple serial messages wirelessly on the 868Mhz radio band from an onboard button, analog inputs and a digital pin for temperature sensing. 
 
-But custom HATS can be expensive
+It's also designed to act as a standalone radio arduino board.
 
 This uses Martin O'Hanlon's [mcpi API](https://github.com/martinohanlon/mcpi) the Minecraft: Pi Edition API Python Library and his and Zhuowei's [Canary Raspberry Juice](https://github.com/martinohanlon/CanaryRaspberryJuice) plugin for use with FACT's CloudMaker Minecraft Server
 
-You can view the [Minecraft CloudMaker Server with this link](http://mc.fact.co.uk:8124/)
+You can view the [Minecraft CloudMaker Server with this link](http://89.34.96.47:8125)
 
 ### Requirements
 
